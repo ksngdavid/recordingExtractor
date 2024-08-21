@@ -163,7 +163,7 @@ public class ApiService {
 			payload.append("	\"urlExpiration\": " + urlExpiration + ",");
 			payload.append("	\"taskIds\": [" + taskIds.toString() + "],");
 //	example:payload.append("	\"taskIds\": [\"425cc6cf-89f7-4149-9b38-d6305227f4bc\",\"4ccbf863-4177-4b92-be0b-d0ba7a38ab45\",\"595b85db-86f4-473c-acee-cbebb52cc7bc\"],");
-			payload.append("	\"includeSegments\": false");
+			payload.append("	\"includeSegments\": true");
 			payload.append("  }");
 			payload.append("}");
 			HttpEntity<?> entity = new HttpEntity<>(payload.toString(), headers);
