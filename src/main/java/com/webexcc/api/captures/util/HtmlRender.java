@@ -190,7 +190,7 @@ public class HtmlRender {
 
 	}
 
-	public void printCaptureRecording2(Recording record, StringBuffer sb, String fileName, String callType) {
+	public void printCaptureRecording2(Recording record, StringBuffer sb, String fileName, String callType, String taskId) {
 		try {
 			CaptureAttributes attributes = record.getAttributes();
 
