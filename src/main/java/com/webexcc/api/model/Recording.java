@@ -6,15 +6,24 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 @JsonInclude(Include.NON_NULL)
 public class Recording {
 
+	private String taskId;
 	private String id;
 	private String callType;
 	private boolean segment;
 	private CaptureAttributes attributes;
 
+	public String getTaskId() {
+		return taskId;
+	}
+
+	public void setTaskId(String taskId) {
+		this.taskId = taskId;
+	}
+	
 	public String getId() {
 		return id;
 	}
-	
+
 	public String getCalltype() {
 		return callType;
 	}
