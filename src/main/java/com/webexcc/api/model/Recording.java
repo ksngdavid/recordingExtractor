@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 public class Recording {
 
 	private String id;
+	private String callType;
 	private boolean segment;
 	private CaptureAttributes attributes;
 
