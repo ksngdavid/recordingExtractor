@@ -27,6 +27,8 @@ import com.webexcc.api.model.AgentsActivities;
 import com.webexcc.api.model.Capture;
 import com.webexcc.api.model.Captures;
 import com.webexcc.api.model.Recording;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+@JsonIgnoreProperties(ignoreUnknown = true)
 
 @RestController
 @CrossOrigin
