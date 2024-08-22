@@ -201,7 +201,7 @@ public class HtmlRender {
 			sb.append("<td nowrap>" + record.getId() + "</td>");
 			sb.append("<td nowrap>" + callType + "</td>");
 			//sb.append("<td nowrap>" + apiService.getAgentsActivitiesByFromTo().getTaskId() + "</td>");
-			sb.append("<td nowrap>" + attributes.getTaskId() + "</td>");
+			sb.append("<td nowrap>" + taskId + "</td>");
 			sb.append("<td nowrap>" + d1 + "</td>");
 			sb.append("<td nowrap>" + d2 + "</td>");
 			sb.append("<td style=''> <a href=\"file:" + fileName + "\">Download</a>" + "" + "</td>");

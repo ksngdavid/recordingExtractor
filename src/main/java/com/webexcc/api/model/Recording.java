@@ -8,7 +8,6 @@ public class Recording {
 
 	private String taskId;
 	private String id;
-	//private String callType;
 	private boolean segment;
 	private CaptureAttributes attributes;
 
@@ -23,10 +22,6 @@ public class Recording {
 	public String getId() {
 		return id;
 	}
-
-	/*public String getCalltype() {
-		return callType;
-	}*/
 
 	public void setId(String id) {
 		this.id = id;
