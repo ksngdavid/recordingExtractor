@@ -190,7 +190,7 @@ public class HtmlRender {
 
 	}
 
-	public void printCaptureRecording2(Recording record, Transcription transcript, StringBuffer sb, String fileName, String callType) {
+	public void printCaptureRecording2(Recording record, StringBuffer sb, String fileName, String callType) {
 		try {
 			CaptureAttributes attributes = record.getAttributes();
 
@@ -213,7 +213,7 @@ public class HtmlRender {
 
 	}
 
-	public void printCaptureAttributes(Recording record, Transcription transcript, StringBuffer sb) {
+	public void printCaptureAttributes(Recording record, StringBuffer sb) {
 		try {
 			Date d1 = new Date(Long.parseLong(record.getAttributes().getStartTime()));
 			Date d2 = new Date(Long.parseLong(record.getAttributes().getStopTime()));
