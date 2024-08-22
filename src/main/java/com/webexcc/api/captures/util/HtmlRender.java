@@ -187,7 +187,7 @@ public class HtmlRender {
 
 	}
 
-	public void printCaptureRecording2(Recording record, StringBuffer sb, String fileName) {
+	public void printCaptureRecording2(Recording record, StringBuffer sb, String fileName, String callType) {
 		try {
 			CaptureAttributes attributes = record.getAttributes();
 
@@ -196,7 +196,7 @@ public class HtmlRender {
 
 //			sb.append("<td nowrap style='text-align:right;font-size:10px' width='200px' >attributes.<b>" + fields[x].getName() + "</b>-></td>");
 			sb.append("<td nowrap>" + record.getId() + "</td>");
-			sb.append("<td nowrap>" + attributes.getCalltype() + "</td>");
+			sb.append("<td nowrap>" + callType + "</td>");
 			sb.append("<td nowrap>" + d1 + "</td>");
 			sb.append("<td nowrap>" + d2 + "</td>");
 			sb.append("<td style=''> <a href=\"file:" + fileName + "\">Download</a>" + "" + "</td>");
