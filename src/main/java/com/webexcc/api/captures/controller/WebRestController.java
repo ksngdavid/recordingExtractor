@@ -219,7 +219,7 @@ public class WebRestController {
 						writeFileToDisk(record);
 					}
 				} else {
-					htmlRender.printCaptureAttributes(record, sb, , capture2.getTaskId());
+					htmlRender.printCaptureAttributes(record, sb, capture2.getTaskId());
 					writeFileToDisk(record);
 				}
 			}
