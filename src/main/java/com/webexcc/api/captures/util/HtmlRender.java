@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 import com.webexcc.api.captures.service.ApiService;
 import com.webexcc.api.model.Capture;
 import com.webexcc.api.model.CaptureAttributes;
+import com.webexcc.api.model.Transcription;
 import com.webexcc.api.model.Recording;
 
 @Service
@@ -167,7 +168,7 @@ public class HtmlRender {
 
 	}
 
-	public void printCaptureRecording(Recording record, StringBuffer sb) {
+	public void printCaptureRecording(Recording record, Transcription transcript, StringBuffer sb) {
 		try {
 			CaptureAttributes attributes = record.getAttributes();
 
@@ -177,7 +178,7 @@ public class HtmlRender {
 //			sb.append("<td nowrap style='text-align:right;font-size:10px' width='200px' >attributes.<b>" + fields[x].getName() + "</b>-></td>");
 			sb.append("<td nowrap>" + record.getId() + "</td>");
 			sb.append("<td nowrap>" + attributes.getCalltype() + "</td>");
-			sb.append("<td nowrap>" + apiService.getAgentsActivitiesByFromTo().getTaskId() + "</td>");
+			sb.append("<td nowrap>" + transcript.getId() + "</td>");
 			sb.append("<td nowrap>" + d1 + "</td>");
 			sb.append("<td nowrap>" + d2 + "</td>");
 			sb.append("<td style=''> <a href=\"" + attributes.getFilePath() + "\">Download</a>" + "" + "</td>");
@@ -189,7 +190,7 @@ public class HtmlRender {
 
 	}
 
-	public void printCaptureRecording2(Recording record, StringBuffer sb, String fileName, String callType) {
+	public void printCaptureRecording2(Recording record, Transcription transcript, StringBuffer sb, String fileName, String callType) {
 		try {
 			CaptureAttributes attributes = record.getAttributes();
 
@@ -199,7 +200,8 @@ public class HtmlRender {
 //			sb.append("<td nowrap style='text-align:right;font-size:10px' width='200px' >attributes.<b>" + fields[x].getName() + "</b>-></td>");
 			sb.append("<td nowrap>" + record.getId() + "</td>");
 			sb.append("<td nowrap>" + callType + "</td>");
-			sb.append("<td nowrap>" + apiService.getAgentsActivitiesByFromTo().getTaskId() + "</td>");
+			//sb.append("<td nowrap>" + apiService.getAgentsActivitiesByFromTo().getTaskId() + "</td>");
+			sb.append("<td nowrap>" + transcript.getId() + "</td>");
 			sb.append("<td nowrap>" + d1 + "</td>");
 			sb.append("<td nowrap>" + d2 + "</td>");
 			sb.append("<td style=''> <a href=\"file:" + fileName + "\">Download</a>" + "" + "</td>");
@@ -211,7 +213,7 @@ public class HtmlRender {
 
 	}
 
-	public void printCaptureAttributes(Recording record, StringBuffer sb) {
+	public void printCaptureAttributes(Recording record, Transcription transcript, StringBuffer sb) {
 		try {
 			Date d1 = new Date(Long.parseLong(record.getAttributes().getStartTime()));
 			Date d2 = new Date(Long.parseLong(record.getAttributes().getStopTime()));
@@ -220,7 +222,8 @@ public class HtmlRender {
 			sb.append("<td nowrap>" + record.getId() + "</td>");
 			sb.append("<td nowrap>" + record.getAttributes().getCalltype() + "</td>");
 			//sb.append("<td nowrap>" + agentActivity.getTaskId() + "</td>");
-			sb.append("<td nowrap>" + apiService.getAgentsActivitiesByFromTo().getTaskId() + "</td>");
+			//sb.append("<td nowrap>" + apiService.getAgentsActivitiesByFromTo().getTaskId() + "</td>");
+			sb.append("<td nowrap>" + transcript.getId() + "</td>");
 			sb.append("<td nowrap>" + d1 + "</td>");
 			sb.append("<td nowrap>" + d2 + "</td>");
 			sb.append("<td style=''> <a href=\"" + record.getAttributes().getFilePath() + "\">Download</a>" + "" + "</td>");
