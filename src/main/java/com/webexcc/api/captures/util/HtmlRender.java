@@ -168,7 +168,7 @@ public class HtmlRender {
 
 	}
 
-	public void printCaptureRecording(Recording record, StringBuffer sb) {
+	public void printCaptureRecording(Recording record, StringBuffer sb, String taskId) {
 		try {
 			CaptureAttributes attributes = record.getAttributes();
 
@@ -178,7 +178,7 @@ public class HtmlRender {
 //			sb.append("<td nowrap style='text-align:right;font-size:10px' width='200px' >attributes.<b>" + fields[x].getName() + "</b>-></td>");
 			sb.append("<td nowrap>" + record.getId() + "</td>");
 			sb.append("<td nowrap>" + attributes.getCalltype() + "</td>");
-			sb.append("<td nowrap>" + attributes.getTaskId() + "</td>");
+			sb.append("<td nowrap>" + taskId + "</td>");
 			sb.append("<td nowrap>" + d1 + "</td>");
 			sb.append("<td nowrap>" + d2 + "</td>");
 			sb.append("<td style=''> <a href=\"" + attributes.getFilePath() + "\">Download</a>" + "" + "</td>");
@@ -213,7 +213,7 @@ public class HtmlRender {
 
 	}
 
-	public void printCaptureAttributes(Recording record, StringBuffer sb) {
+	public void printCaptureAttributes(Recording record, StringBuffer sb, String taskId) {
 		try {
 			Date d1 = new Date(Long.parseLong(record.getAttributes().getStartTime()));
 			Date d2 = new Date(Long.parseLong(record.getAttributes().getStopTime()));
@@ -223,7 +223,7 @@ public class HtmlRender {
 			sb.append("<td nowrap>" + record.getAttributes().getCalltype() + "</td>");
 			//sb.append("<td nowrap>" + agentActivity.getTaskId() + "</td>");
 			//sb.append("<td nowrap>" + apiService.getAgentsActivitiesByFromTo().getTaskId() + "</td>");
-			sb.append("<td nowrap>" + record.getAttributes().getTaskId() + "</td>");
+			sb.append("<td nowrap>" + taskId + "</td>");
 			sb.append("<td nowrap>" + d1 + "</td>");
 			sb.append("<td nowrap>" + d2 + "</td>");
 			sb.append("<td style=''> <a href=\"" + record.getAttributes().getFilePath() + "\">Download</a>" + "" + "</td>");

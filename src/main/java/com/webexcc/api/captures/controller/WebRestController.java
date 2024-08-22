@@ -179,6 +179,7 @@ public class WebRestController {
 				// logger.info("days to go backwards:{}", days);
 				this.processTasks(oCaptures, c, days);
 				logger.info("oCaptures.data.size :{}", oCaptures.getData().size());
+				logger.info("oCaptures.data :{}", oCaptures.getData());
 
 				try {
 					search = request.getParameter("search").toLowerCase();
@@ -214,11 +215,11 @@ public class WebRestController {
 				if (search.length() > 0) {
 					// only print the matching search string
 					if (record.getId().contains(search)) {
-						htmlRender.printCaptureRecording(record, sb);
+						htmlRender.printCaptureRecording(record, sb, capture2.getTaskId());
 						writeFileToDisk(record);
 					}
 				} else {
-					htmlRender.printCaptureAttributes(record, sb);
+					htmlRender.printCaptureAttributes(record, sb, , capture2.getTaskId());
 					writeFileToDisk(record);
 				}
 			}
