@@ -22,6 +22,7 @@ public class HtmlRender {
 	static Logger logger = LoggerFactory.getLogger(HtmlRender.class);
 	@Autowired
 	ApiService apiService;
+	AgentActivity agentActivity;
 
 //	private Organization organization = new Organization();
 	public void printOrginizationForm(HttpServletRequest request, StringBuffer sb) {
@@ -176,6 +177,7 @@ public class HtmlRender {
 //			sb.append("<td nowrap style='text-align:right;font-size:10px' width='200px' >attributes.<b>" + fields[x].getName() + "</b>-></td>");
 			sb.append("<td nowrap>" + record.getId() + "</td>");
 			sb.append("<td nowrap>" + attributes.getCalltype() + "</td>");
+			sb.append("<td nowrap>" + agentActivity.getTaskId() + "</td>");
 			sb.append("<td nowrap>" + d1 + "</td>");
 			sb.append("<td nowrap>" + d2 + "</td>");
 			sb.append("<td style=''> <a href=\"" + attributes.getFilePath() + "\">Download</a>" + "" + "</td>");
@@ -197,6 +199,7 @@ public class HtmlRender {
 //			sb.append("<td nowrap style='text-align:right;font-size:10px' width='200px' >attributes.<b>" + fields[x].getName() + "</b>-></td>");
 			sb.append("<td nowrap>" + record.getId() + "</td>");
 			sb.append("<td nowrap>" + callType + "</td>");
+			sb.append("<td nowrap>" + agentActivity.getTaskId() + "</td>");
 			sb.append("<td nowrap>" + d1 + "</td>");
 			sb.append("<td nowrap>" + d2 + "</td>");
 			sb.append("<td style=''> <a href=\"file:" + fileName + "\">Download</a>" + "" + "</td>");
@@ -216,6 +219,7 @@ public class HtmlRender {
 //			sb.append("<td nowrap style='text-align:right;font-size:10px' width='200px' >attributes.<b>" + fields[x].getName() + "</b>-></td>");
 			sb.append("<td nowrap>" + record.getId() + "</td>");
 			sb.append("<td nowrap>" + record.getAttributes().getCalltype() + "</td>");
+			sb.append("<td nowrap>" + agentActivity.getTaskId() + "</td>");
 			sb.append("<td nowrap>" + d1 + "</td>");
 			sb.append("<td nowrap>" + d2 + "</td>");
 			sb.append("<td style=''> <a href=\"" + record.getAttributes().getFilePath() + "\">Download</a>" + "" + "</td>");
