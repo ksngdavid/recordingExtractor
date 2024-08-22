@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CaptureAttributes {
 
-
+	private String taskId;
 	private String callType;
 	private String fileName;
 	private String filePath;
@@ -20,6 +20,14 @@ public class CaptureAttributes {
 	private String channel1;
 	private String channel2;
 
+	public String getTaskId() {
+		return taskId;
+	}
+
+	public void setTaskId(String taskId) {
+		this.taskId = taskId;
+	}
+	
 	public String getFileName() {
 		return fileName;
 	}

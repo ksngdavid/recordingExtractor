@@ -27,7 +27,6 @@ import com.webexcc.api.model.AgentsActivities;
 import com.webexcc.api.model.Capture;
 import com.webexcc.api.model.Captures;
 import com.webexcc.api.model.Recording;
-import com.webexcc.api.model.Transcription;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 
@@ -215,11 +214,11 @@ public class WebRestController {
 				if (search.length() > 0) {
 					// only print the matching search string
 					if (record.getId().contains(search)) {
-						htmlRender.printCaptureRecording(record, transcript, sb);
+						htmlRender.printCaptureRecording(record, sb);
 						writeFileToDisk(record);
 					}
 				} else {
-					htmlRender.printCaptureAttributes(record, transcript, sb);
+					htmlRender.printCaptureAttributes(record, sb);
 					writeFileToDisk(record);
 				}
 			}

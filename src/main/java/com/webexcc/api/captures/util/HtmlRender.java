@@ -168,7 +168,7 @@ public class HtmlRender {
 
 	}
 
-	public void printCaptureRecording(Recording record, Transcription transcript, StringBuffer sb) {
+	public void printCaptureRecording(Recording record, StringBuffer sb) {
 		try {
 			CaptureAttributes attributes = record.getAttributes();
 
@@ -178,7 +178,7 @@ public class HtmlRender {
 //			sb.append("<td nowrap style='text-align:right;font-size:10px' width='200px' >attributes.<b>" + fields[x].getName() + "</b>-></td>");
 			sb.append("<td nowrap>" + record.getId() + "</td>");
 			sb.append("<td nowrap>" + attributes.getCalltype() + "</td>");
-			sb.append("<td nowrap>" + transcript.getId() + "</td>");
+			sb.append("<td nowrap>" + attributes.getTaskId() + "</td>");
 			sb.append("<td nowrap>" + d1 + "</td>");
 			sb.append("<td nowrap>" + d2 + "</td>");
 			sb.append("<td style=''> <a href=\"" + attributes.getFilePath() + "\">Download</a>" + "" + "</td>");
@@ -201,7 +201,7 @@ public class HtmlRender {
 			sb.append("<td nowrap>" + record.getId() + "</td>");
 			sb.append("<td nowrap>" + callType + "</td>");
 			//sb.append("<td nowrap>" + apiService.getAgentsActivitiesByFromTo().getTaskId() + "</td>");
-			sb.append("<td nowrap>" + transcript.getId() + "</td>");
+			sb.append("<td nowrap>" + attributes.getTaskId() + "</td>");
 			sb.append("<td nowrap>" + d1 + "</td>");
 			sb.append("<td nowrap>" + d2 + "</td>");
 			sb.append("<td style=''> <a href=\"file:" + fileName + "\">Download</a>" + "" + "</td>");
@@ -223,7 +223,7 @@ public class HtmlRender {
 			sb.append("<td nowrap>" + record.getAttributes().getCalltype() + "</td>");
 			//sb.append("<td nowrap>" + agentActivity.getTaskId() + "</td>");
 			//sb.append("<td nowrap>" + apiService.getAgentsActivitiesByFromTo().getTaskId() + "</td>");
-			sb.append("<td nowrap>" + transcript.getId() + "</td>");
+			sb.append("<td nowrap>" + record.getAttributes().getTaskId() + "</td>");
 			sb.append("<td nowrap>" + d1 + "</td>");
 			sb.append("<td nowrap>" + d2 + "</td>");
 			sb.append("<td style=''> <a href=\"" + record.getAttributes().getFilePath() + "\">Download</a>" + "" + "</td>");
