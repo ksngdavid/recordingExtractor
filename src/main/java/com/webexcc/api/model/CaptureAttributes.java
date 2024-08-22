@@ -10,6 +10,8 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CaptureAttributes {
 
+
+	private String callType;
 	private String fileName;
 	private String filePath;
 	private String startTime;
@@ -20,6 +22,10 @@ public class CaptureAttributes {
 
 	public String getFileName() {
 		return fileName;
+	}
+
+	public String getCalltype() {
+		return callType;
 	}
 
 	public void setFileName(String fileName) {
