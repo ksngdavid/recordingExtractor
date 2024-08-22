@@ -25,6 +25,8 @@ import com.webexcc.api.model.AgentsActivities;
 import com.webexcc.api.model.Authentication;
 import com.webexcc.api.model.Captures;
 import com.webexcc.api.model.Organization;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+@JsonIgnoreProperties(ignoreUnknown = true)
 
 @Service
 public class ApiService {
@@ -33,7 +35,7 @@ public class ApiService {
 	@Autowired
 	private RestTemplate restTemplate;
 	DateFormat oDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
-	String baseURL = "https://api.wxcc-us1.cisco.com/organization";
+	String baseURL = "https://api.wxcc-anz1.cisco.com/organization";
 
 	@Value("${data_center_url}")
 	String dataCenterURL;
