@@ -32,6 +32,10 @@ public class CaptureAttributes {
 		this.fileName = fileName;
 	}
 
+	public void setCalltype(String fileName) {
+		this.callType = callType;
+	}
+
 	public String getFilePath() {
 		return filePath;
 	}
