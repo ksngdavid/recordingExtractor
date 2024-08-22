@@ -32,7 +32,7 @@ public class CaptureAttributes {
 		this.fileName = fileName;
 	}
 
-	public void setCalltype(String fileName) {
+	public void setCalltype(String callType) {
 		this.callType = callType;
 	}
 
