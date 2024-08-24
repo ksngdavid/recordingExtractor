@@ -181,7 +181,7 @@ public class WebRestController {
 
 				int days = Integer.parseInt(request.getParameter("days").toString());
 				// logger.info("days to go backwards:{}", days);
-				this.processTasks(oCaptures, c, days);
+				this.processTasks(oCaptures, c, days, formValue);
 				logger.info("oCaptures.data.size :{}", oCaptures.getData().size());
 				logger.info("oCaptures.data :{}", oCaptures.getData());
 
@@ -210,7 +210,7 @@ public class WebRestController {
 	/**
 	 * loop thru all call recordings, render results via HTML & call write file method
 	 */
-	private void processCaptures(StringBuffer sb, Captures oCaptures, String search) {
+	private void processCaptures(StringBuffer sb, Captures oCaptures, String search, formValue) {
 		search = search.trim();
 		List<Capture> data = oCaptures.getData();
 		for (Capture capture2 : data) {
