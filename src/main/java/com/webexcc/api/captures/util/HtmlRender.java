@@ -251,7 +251,7 @@ public class HtmlRender {
 		sb.append("\n}");
 		sb.append("\n");
 		String reportV = "no";
-		Return reportV;
+		return reportV;
 		sb.append("\n</script>");
 		sb.append("\n");
 
@@ -264,7 +264,7 @@ public class HtmlRender {
 		sb.append("\n}");
 		sb.append("\n");
 		String reportV = "yes";
-		Return reportV;
+		return reportV;
 		sb.append("\n</script>");
 		sb.append("\n");
 		// Added for Reporting
