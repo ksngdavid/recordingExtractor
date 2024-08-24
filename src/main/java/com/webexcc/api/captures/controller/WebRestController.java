@@ -40,6 +40,9 @@ public class WebRestController {
 	String baseURL = "https://webexapis.com/v1";
 
 	@Autowired
+	HtmlReporter htmlReporter;
+
+	@Autowired
 	HtmlRender htmlRender;
 
 	@Autowired
