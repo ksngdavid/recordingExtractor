@@ -250,6 +250,8 @@ public class HtmlRender {
 		sb.append("\ndocument.getElementById('main').submit();");
 		sb.append("\n}");
 		sb.append("\n");
+		String reportV = no;
+		Return reportV
 		sb.append("\n</script>");
 		sb.append("\n");
 
@@ -261,6 +263,8 @@ public class HtmlRender {
 		sb.append("\ndocument.getElementById('main').submit();");
 		sb.append("\n}");
 		sb.append("\n");
+		String reportV = yes;
+		Return reportV
 		sb.append("\n</script>");
 		sb.append("\n");
 		// Added for Reporting
@@ -312,7 +316,7 @@ public class HtmlRender {
 		sb.append("<tr style='text-align: center;vertical-align: middle;' >\n");
 
 		sb.append("</tr>");
-		return sDay;
+
 	}
 
 	public void header(StringBuffer sb) {
