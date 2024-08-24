@@ -253,6 +253,18 @@ public class HtmlRender {
 		sb.append("\n</script>");
 		sb.append("\n");
 
+		// Added for Reporting
+		sb.append("<span> &nbsp; &nbsp; &nbsp;<span/>");
+		sb.append("\n<script>");
+		sb.append("\nfunction submit3() {");
+		sb.append("document.getElementById(\"tableWait\").style.display = \"block\";\n");
+		sb.append("\ndocument.getElementById('main').submit();");
+		sb.append("\n}");
+		sb.append("\n");
+		sb.append("\n</script>");
+		sb.append("\n");
+		// Added for Reporting
+
 		sb.append("<form id='main' action='/captures'>");
 		sb.append("<label for=\"meeting-time\">Choose end time: (working backwards) </label>");
 		sb.append("</br>");
@@ -289,7 +301,7 @@ public class HtmlRender {
 
 		sb.append("</br>");
 		sb.append("<button type='button' onClick='javaScript:submit2();'>Submit</button>");
-		sb.append("<button type='button' onClick='javaScript:submit2();'>Report Only</button>");
+		sb.append("<button type='button' onClick='javaScript:submit3();'>Report Only</button>");
 
 		sb.append("</form>");
 		sb.append("<table id='tableWait' width='50%' border='0' style=\"border:0px solid black;;margin-left:auto;margin-right:auto;display:none\">");
