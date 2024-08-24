@@ -181,7 +181,7 @@ public class WebRestController {
 
 				int days = Integer.parseInt(request.getParameter("days").toString());
 				// logger.info("days to go backwards:{}", days);
-				this.processTasks(oCaptures, c, days, formValue);
+				this.processTasks(oCaptures, c, days);
 				logger.info("oCaptures.data.size :{}", oCaptures.getData().size());
 				logger.info("oCaptures.data :{}", oCaptures.getData());
 
@@ -190,7 +190,7 @@ public class WebRestController {
 					logger.info("search :{}", search);
 				} catch (Exception e) {
 				}
-				this.processCaptures(sb, oCaptures, search);
+				this.processCaptures(sb, oCaptures, search, formValue);
 			} catch (Exception e) {
 				logger.error("Exception:{}", e.getMessage());
 			}
