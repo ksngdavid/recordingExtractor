@@ -210,7 +210,7 @@ public class WebRestController {
 	/**
 	 * loop thru all call recordings, render results via HTML & call write file method
 	 */
-	private void processCaptures(StringBuffer sb, Captures oCaptures, String search, formValue) {
+	private void processCaptures(StringBuffer sb, Captures oCaptures, String search, String formValue) {
 		search = search.trim();
 		List<Capture> data = oCaptures.getData();
 		for (Capture capture2 : data) {
