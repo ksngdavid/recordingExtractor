@@ -1,8 +1,8 @@
 package com.webexcc.api.captures.util;
-package files;
+//package files;
 
-import java.io.File;
-import java.io.FileWriter;
+//import java.io.File;
+//import java.io.FileWriter;
 
 import java.lang.reflect.Field;
 import java.text.DecimalFormat;
@@ -25,7 +25,7 @@ import com.webexcc.api.model.Recording;
 
 @Service
 public class HtmlReporter {
-	static Logger logger = LoggerFactory.getLogger(HtmlRender.class);
+	static Logger logger = LoggerFactory.getLogger(HtmlReporter.class);
 	@Autowired
 	ApiService apiService;
 //	AgentActivity agentActivity;
