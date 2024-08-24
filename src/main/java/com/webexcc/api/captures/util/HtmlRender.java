@@ -312,7 +312,7 @@ public class HtmlRender {
 		sb.append("<tr style='text-align: center;vertical-align: middle;' >\n");
 
 		sb.append("</tr>");
-		return sDay
+		return sDay;
 	}
 
 	public void header(StringBuffer sb) {
