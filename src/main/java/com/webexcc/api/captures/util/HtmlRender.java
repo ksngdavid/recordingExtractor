@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.webexcc.api.captures.util.HtmlRender;
 import com.webexcc.api.captures.service.ApiService;
 import com.webexcc.api.model.Capture;
 import com.webexcc.api.model.CaptureAttributes;
