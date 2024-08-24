@@ -289,6 +289,7 @@ public class HtmlRender {
 
 		sb.append("</br>");
 		sb.append("<button type='button' onClick='javaScript:submit2();'>Submit</button>");
+		sb.append("<button type='button' onClick='javaScript:submit2();'>Report Only</button>");
 
 		sb.append("</form>");
 		sb.append("<table id='tableWait' width='50%' border='0' style=\"border:0px solid black;;margin-left:auto;margin-right:auto;display:none\">");
