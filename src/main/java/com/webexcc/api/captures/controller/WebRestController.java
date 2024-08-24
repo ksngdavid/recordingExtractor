@@ -219,10 +219,12 @@ public class WebRestController {
 				if (search.length() > 0) {
 					// only print the matching search string
 					if (record.getId().contains(search)) {
+						logger.info("Flag from form", htmlRender.form(request, sb).sDay);
 						htmlReporter.printCaptureRecording(record, sb, capture2.getTaskId());
 						writeFileToDisk(record);
 					}
 				} else {
+					logger.info("Flag from form", htmlRender.form(request, sb).sDay);
 					htmlReporter.printCaptureAttributes(record, sb, capture2.getTaskId());
 					writeFileToDisk(record);
 				}
