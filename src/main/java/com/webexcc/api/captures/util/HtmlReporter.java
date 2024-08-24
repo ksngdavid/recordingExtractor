@@ -1,8 +1,7 @@
 package com.webexcc.api.captures.util;
-//package files;
 
-//import java.io.File;
-//import java.io.FileWriter;
+import java.io.File;
+import java.io.FileWriter;
 
 import java.lang.reflect.Field;
 import java.text.DecimalFormat;
