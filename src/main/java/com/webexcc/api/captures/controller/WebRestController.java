@@ -158,7 +158,7 @@ public class WebRestController {
 
 		try {
 			// date time
-			htmlRender.form(request, sb);
+			String formValue = htmlRender.form(request, sb);
 			/**
 			 * do the work
 			 */
@@ -219,12 +219,12 @@ public class WebRestController {
 				if (search.length() > 0) {
 					// only print the matching search string
 					if (record.getId().contains(search)) {
-						logger.info("Flag from form", + request.getParameter("sDay").toString());
+						logger.info("Flag from form", formValue);
 						htmlReporter.printCaptureRecording(record, sb, capture2.getTaskId());
 						writeFileToDisk(record);
 					}
 				} else {
-					logger.info("Flag from form", request.getParameter("sDay").toString());
+					logger.info("Flag from form", formValue);
 					htmlReporter.printCaptureAttributes(record, sb, capture2.getTaskId());
 					writeFileToDisk(record);
 				}
