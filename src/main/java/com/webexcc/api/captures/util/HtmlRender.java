@@ -241,7 +241,7 @@ public class HtmlRender {
 		sb.append("</html>\n");
 	}
 
-	public void form(HttpServletRequest request, StringBuffer sb) {
+	public String form(HttpServletRequest request, StringBuffer sb) {
 
 		sb.append("<span> &nbsp; &nbsp; &nbsp;<span/>");
 		sb.append("\n<script>");
@@ -312,7 +312,7 @@ public class HtmlRender {
 		sb.append("<tr style='text-align: center;vertical-align: middle;' >\n");
 
 		sb.append("</tr>");
-
+		return sDay
 	}
 
 	public void header(StringBuffer sb) {
