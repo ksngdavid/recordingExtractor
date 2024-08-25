@@ -319,7 +319,7 @@ public class HtmlRender {
 
 		sb.append("</tr>");
 
-	return reportV;
+	return "{reportV}";
 	}
 
 	public void header(StringBuffer sb) {
