@@ -242,7 +242,7 @@ public class HtmlRender {
 	}
 
 	public String form(HttpServletRequest request, StringBuffer sb) {
-		//String reportV = "";
+		String reportV = "";
 		sb.append("<span> &nbsp; &nbsp; &nbsp;<span/>");
 		sb.append("\n<script>");
 		sb.append("\nfunction submit2() {");
@@ -251,7 +251,7 @@ public class HtmlRender {
 		sb.append("\nreportV = 'no';");	
 		sb.append("\nreturn reportV;");
 		sb.append("\n}");
-		sb.append("\n");
+		sb.append("\nreportV = submit2()");
 
 		//sb.append("\n(\"reportV\") = \"no\";");
 		//reportV = request.getParameter("reportV").toString();
