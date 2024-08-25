@@ -242,7 +242,7 @@ public class HtmlRender {
 	}
 
 	public String form(HttpServletRequest request, StringBuffer sb) {
-
+		String reportV = "";
 		sb.append("<span> &nbsp; &nbsp; &nbsp;<span/>");
 		sb.append("\n<script>");
 		sb.append("\nfunction submit2() {");
@@ -251,7 +251,7 @@ public class HtmlRender {
 		sb.append("\n}");
 		sb.append("\n");
 		//String reportV = "no";
-		sb.append("\nString (\"reportV\") = \"no\";\n");
+		//sb.append("\nString (\"reportV\") = \"no\";\n");
 		//sb.append("\n");
 		//sb.append("\n<return (\"reportV\");\n");
 		//return "{\"Exception\":\"" + e.getMessage() + "\"}";
@@ -306,8 +306,8 @@ public class HtmlRender {
 		}
 
 		sb.append("</br>");
-		sb.append("<button type='button' onClick='javaScript:submit2();'>Submit</button>");
-		sb.append("<button type='button' onClick='javaScript:submit3();'>Report Only</button>");
+		sb.append("<button type='button' onClick='javaScript:submit2();reportV = "no";'>Submit</button>");
+		sb.append("<button type='button' onClick='javaScript:submit3();reportV = "yes";'>Report Only</button>");
 
 		sb.append("</form>");
 		sb.append("<table id='tableWait' width='50%' border='0' style=\"border:0px solid black;;margin-left:auto;margin-right:auto;display:none\">");
@@ -320,7 +320,8 @@ public class HtmlRender {
 		sb.append("</tr>");
 
 	//return "{\"reportV}\"}";
-	return "{(\"reportV\")}"
+	//return "{(\"reportV\")}"
+	return reportV;
 	}
 
 	public void header(StringBuffer sb) {
