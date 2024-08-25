@@ -242,21 +242,16 @@ public class HtmlRender {
 	}
 
 	public String form(HttpServletRequest request, StringBuffer sb) {
-		//String reportV = "";
-		<script>
 		String reportV = "";
-			function noreport(){
-				reportV = "no";
-			}
-			</script>
 		sb.append("<span> &nbsp; &nbsp; &nbsp;<span/>");
 		sb.append("\n<script>");
 		sb.append("\nfunction submit2() {");
 		sb.append("document.getElementById(\"tableWait\").style.display = \"block\";\n");
 		sb.append("\ndocument.getElementById('main').submit();");
+		reportV = "no";		
 		sb.append("\n}");
 		sb.append("\n");
-		//String reportV = "no";
+
 		//sb.append("\n(\"reportV\") = \"no\";");
 		//reportV = request.getParameter("reportV").toString();
 		//sb.append("\n");
@@ -271,9 +266,9 @@ public class HtmlRender {
 		sb.append("\nfunction submit3() {");
 		sb.append("document.getElementById(\"tableWait\").style.display = \"block\";\n");
 		sb.append("\ndocument.getElementById('main').submit();");
+		reportV = "yes";
 		sb.append("\n}");
 		sb.append("\n");
-		//reportV = "yes";
 		sb.append("\n</script>");
 		sb.append("\n");
 		// Added for Reporting
@@ -313,7 +308,7 @@ public class HtmlRender {
 		}
 
 		sb.append("</br>");
-		sb.append("<button type='button' onClick='javaScript:submit2(); noreport()'>Submit</button>");
+		sb.append("<button type='button' onClick='javaScript:submit2();'>Submit</button>");
 		sb.append("<button type='button' onClick='javaScript:submit3();'>Report Only</button>");
 
 		sb.append("</form>");
