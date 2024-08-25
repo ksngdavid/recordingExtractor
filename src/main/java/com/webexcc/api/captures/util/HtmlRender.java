@@ -251,7 +251,7 @@ public class HtmlRender {
 		sb.append("\n}");
 		sb.append("\n");
 		//String reportV = "no";
-		sb.append("\n(\"reportV\") = \"no\";");
+		//sb.append("\n(\"reportV\") = \"no\";");
 		//reportV = request.getParameter("reportV").toString();
 		try {
 			reportV = request.getParameter("reportV").toString();
