@@ -250,7 +250,10 @@ public class HtmlRender {
 		sb.append("\ndocument.getElementById('main').submit();");
 		sb.append("\n}");
 		sb.append("\n");
-		String reportV = "no";
+		//String reportV = "no";
+		sb.append("\nString reportV = "no"");
+		//sb.append("\n");
+		//sb.append("\n<return reportV");
 		sb.append("\n</script>");
 		sb.append("\n");
 
@@ -262,7 +265,7 @@ public class HtmlRender {
 		sb.append("\ndocument.getElementById('main').submit();");
 		sb.append("\n}");
 		sb.append("\n");
-		reportV = "yes";
+		//reportV = "yes";
 		sb.append("\n</script>");
 		sb.append("\n");
 		// Added for Reporting
