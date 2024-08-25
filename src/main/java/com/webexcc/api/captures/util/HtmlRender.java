@@ -248,7 +248,7 @@ public class HtmlRender {
 		sb.append("\nfunction submit2() {");
 		sb.append("document.getElementById(\"tableWait\").style.display = \"block\";\n");
 		sb.append("\ndocument.getElementById('main').submit();");
-		sb.append("\nreportV = "no";");	
+		sb.append("\nreportV = 'no';");	
 		sb.append("\n}");
 		sb.append("\n");
 
@@ -266,7 +266,7 @@ public class HtmlRender {
 		sb.append("\nfunction submit3() {");
 		sb.append("document.getElementById(\"tableWait\").style.display = \"block\";\n");
 		sb.append("\ndocument.getElementById('main').submit();");
-		sb.append("\nreportV = "yes";");
+		sb.append("\nreportV = 'yes';");
 		sb.append("\n}");
 		sb.append("\n");
 		sb.append("\n</script>");
