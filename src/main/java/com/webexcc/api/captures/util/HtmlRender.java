@@ -253,11 +253,6 @@ public class HtmlRender {
 		//String reportV = "no";
 		//sb.append("\n(\"reportV\") = \"no\";");
 		//reportV = request.getParameter("reportV").toString();
-		try {
-			reportV = request.getParameter("reportV").toString();
-		} catch (Exception e) {
-			reportV = "no";
-		}
 		//sb.append("\n");
 		//sb.append("\n<return (\"reportV\");\n");
 		//return "{\"Exception\":\"" + e.getMessage() + "\"}";
@@ -272,11 +267,6 @@ public class HtmlRender {
 		sb.append("\ndocument.getElementById('main').submit();");
 		sb.append("\n}");
 		sb.append("\n");
-		try {
-			reportV = request.getParameter("reportV").toString();
-		} catch (Exception e) {
-			reportV = "yes";
-		}
 		//reportV = "yes";
 		sb.append("\n</script>");
 		sb.append("\n");
@@ -317,8 +307,8 @@ public class HtmlRender {
 		}
 
 		sb.append("</br>");
-		sb.append("<button type='button' onClick='javaScript:submit2();'>Submit</button>");
-		sb.append("<button type='button' onClick='javaScript:submit3();'>Report Only</button>");
+		sb.append("<button type='button' onClick="javaScript:submit2(); reportV = "no";">Submit</button>");
+		sb.append("<button type='button' onClick="javaScript:submit3(); reportV = 'yes';"'>Report Only</button>");
 
 		sb.append("</form>");
 		sb.append("<table id='tableWait' width='50%' border='0' style=\"border:0px solid black;;margin-left:auto;margin-right:auto;display:none\">");
