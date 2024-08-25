@@ -253,7 +253,8 @@ public class HtmlRender {
 		//String reportV = "no";
 		sb.append("\nString (\"reportV\") = \"no\";\n");
 		//sb.append("\n");
-		//sb.append("\n<return reportV");
+		sb.append("\n<return (\"reportV\");\n");
+		//return "{\"Exception\":\"" + e.getMessage() + "\"}";
 		sb.append("\n</script>");
 		sb.append("\n");
 
@@ -318,7 +319,7 @@ public class HtmlRender {
 
 		sb.append("</tr>");
 
-	return reportV;
+	//return reportV;
 	}
 
 	public void header(StringBuffer sb) {
