@@ -251,7 +251,7 @@ public class HtmlRender {
 		sb.append("\n}");
 		sb.append("\n");
 		//String reportV = "no";
-		sb.append("\nString reportV = "no"");
+		sb.append("\nString (\"reportV\") = \"no\";\n");
 		//sb.append("\n");
 		//sb.append("\n<return reportV");
 		sb.append("\n</script>");
