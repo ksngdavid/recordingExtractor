@@ -272,6 +272,11 @@ public class HtmlRender {
 		sb.append("\ndocument.getElementById('main').submit();");
 		sb.append("\n}");
 		sb.append("\n");
+		try {
+			reportV = request.getParameter("reportV").toString();
+		} catch (Exception e) {
+			reportV = "yes";
+		}
 		//reportV = "yes";
 		sb.append("\n</script>");
 		sb.append("\n");
