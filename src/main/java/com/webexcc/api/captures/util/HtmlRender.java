@@ -252,7 +252,12 @@ public class HtmlRender {
 		sb.append("\n");
 		//String reportV = "no";
 		sb.append("\n(\"reportV\") = \"no\";");
-		reportV = request.getParameter("reportV").toString();
+		//reportV = request.getParameter("reportV").toString();
+		try {
+			reportV = request.getParameter("reportV").toString();
+		} catch (Exception e) {
+			reportV = "no";
+		}
 		//sb.append("\n");
 		//sb.append("\n<return (\"reportV\");\n");
 		//return "{\"Exception\":\"" + e.getMessage() + "\"}";
