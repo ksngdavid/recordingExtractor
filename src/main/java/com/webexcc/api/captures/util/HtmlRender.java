@@ -307,8 +307,8 @@ public class HtmlRender {
 		}
 
 		sb.append("</br>");
-		sb.append("<button type='button' onClick='javaScript:submit2();reportV = 'no''>Submit</button>");
-		sb.append("<button type='button' onClick='javaScript:submit3();reportV = 'yes''>Report Only</button>");
+		sb.append("<button type='button' onClick='javaScript:submit2(); noreport()'>Submit</button>");
+		sb.append("<button type='button' onClick='javaScript:submit3();reportV = "yes"'>Report Only</button>");
 
 		sb.append("</form>");
 		sb.append("<table id='tableWait' width='50%' border='0' style=\"border:0px solid black;;margin-left:auto;margin-right:auto;display:none\">");
@@ -319,6 +319,11 @@ public class HtmlRender {
 		sb.append("<tr style='text-align: center;vertical-align: middle;' >\n");
 
 		sb.append("</tr>");
+		<script>
+			function noreport(){
+				reportV = "no";
+			}
+			</script>
 
 	//return "{\"reportV}\"}";
 	//return "{(\"reportV\")}"
