@@ -327,7 +327,7 @@ public class HtmlRender {
 			sb.append("<input type=\"date\" id=\"meeting-time\" name=\"date\" value=\"" + c.get(Calendar.YEAR) + "-" + (mFormat.format(Double.valueOf(c.get(Calendar.MONTH) + 1))) + "-" + mFormat.format(Double.valueOf(c.get(Calendar.DAY_OF_MONTH))) + "\"> \n");
 		}
 		reportV = "yes";
-		String sDay = "1";
+		sDay = "1";
 		try {
 			sDay = request.getParameter("days").toString();
 		} catch (Exception e) {
