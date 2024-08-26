@@ -324,7 +324,7 @@ public class HtmlRender {
 
 	//return "{\"reportV}\"}";
 	//return "{(\"reportV\")}"
-	return reportV;
+	return "{\"submit2()\"}";
 	}
 
 	public void header(StringBuffer sb) {
