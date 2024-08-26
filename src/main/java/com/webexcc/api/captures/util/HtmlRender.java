@@ -246,7 +246,7 @@ public class HtmlRender {
 		sb.append("<span> &nbsp; &nbsp; &nbsp;<span/>");
 		sb.append("\n<script>");
 		sb.append("\nfunction submit2() {");
-		sb.append("\n\"reportV\" = "no";\n");	
+		sb.append("\n\"reportV = 'no'\";\n");	
 		sb.append("document.getElementById(\"tableWait\").style.display = \"block\";\n");
 		sb.append("\ndocument.getElementById('main').submit();");
 		//sb.append("\nreturn reportV;");
