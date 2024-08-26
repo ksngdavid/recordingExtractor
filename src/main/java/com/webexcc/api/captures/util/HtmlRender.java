@@ -249,7 +249,7 @@ public class HtmlRender {
 		sb.append("reportV = 'no';\n");	
 		sb.append("document.getElementById(\"tableWait\").style.display = \"block\";\n");
 		sb.append("\ndocument.getElementById('main').submit();");
-		sb.append("\n\"return reportV\";");
+		sb.append("return reportV;\n");
 		sb.append("\n}");
 		//sb.append("\nreportV = submit2()");
 
