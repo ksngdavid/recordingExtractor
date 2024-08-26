@@ -266,10 +266,10 @@ public class HtmlRender {
 		sb.append("\n<script>");
 		sb.append("\nfunction submit3() {");
 		sb.append("document.getElementById(\"tableWait\").style.display = \"block\";\n");
-		sb.append("\ndocument.getElementById('main').submit();");
-		sb.append("\nreportV = 'yes';");
+		sb.append("\ndocument.getElementById('main2').submit();");
+		//sb.append("\nreportV = 'yes';");
 		sb.append("\n}");
-		sb.append("\n");
+		//sb.append("\n");
 		sb.append("\n</script>");
 		sb.append("\n");
 		// Added for Reporting
@@ -284,6 +284,49 @@ public class HtmlRender {
 			Calendar c = Calendar.getInstance();
 			sb.append("<input type=\"date\" id=\"meeting-time\" name=\"date\" value=\"" + c.get(Calendar.YEAR) + "-" + (mFormat.format(Double.valueOf(c.get(Calendar.MONTH) + 1))) + "-" + mFormat.format(Double.valueOf(c.get(Calendar.DAY_OF_MONTH))) + "\"> \n");
 		}
+		reportV = "no";
+		String sDay = "1";
+		try {
+			sDay = request.getParameter("days").toString();
+		} catch (Exception e) {
+			sDay = "1";
+		}
+		sb.append("<label for=\"days\">Number of days:</label> ");
+		sb.append("<select name=\"days\" id=\"days\">");
+
+		for (int i = 1; i <= 30; i++) {
+			if (sDay.equals("" + i)) {
+				sb.append("  <option selected value=\"" + i + "\">" + i + "</option>");
+			} else {
+				sb.append("  <option value=\"" + i + "\">" + i + "</option>");
+			}
+		}
+		sb.append("</select>");
+		try {
+			String search = request.getParameter("search").toString();
+			sb.append(" &nbsp; &nbsp;Search: <input  type='text' id='search' name='search' size=\"50\" value='" + search + "'>");
+		} catch (Exception e) {
+			sb.append(" &nbsp; &nbsp;Search: <input type='text' id='search' name='search' size=\"50\" value=''>");
+		}
+
+		sb.append("</br>");
+		sb.append("<button type='button' onClick='javaScript:submit2();'>Submit</button>");
+		sb.append("<button type='button' onClick='javaScript:submit3();'>Report Only</button>");
+
+		sb.append("</form>");
+
+// Added for Reporting
+		sb.append("<form id='main2' action='/captures'>");
+		sb.append("<label for=\"meeting-time\">Choose end time: (working backwards) </label>");
+		sb.append("</br>");
+		try {
+			sb.append("<input type=\"date\" id=\"meeting-time\" name=\"date\" value=\"" + request.getParameter("date").toString() + "\"> \n");
+		} catch (Exception e) {
+			DecimalFormat mFormat = new DecimalFormat("00");
+			Calendar c = Calendar.getInstance();
+			sb.append("<input type=\"date\" id=\"meeting-time\" name=\"date\" value=\"" + c.get(Calendar.YEAR) + "-" + (mFormat.format(Double.valueOf(c.get(Calendar.MONTH) + 1))) + "-" + mFormat.format(Double.valueOf(c.get(Calendar.DAY_OF_MONTH))) + "\"> \n");
+		}
+		reportV = "yes";
 		String sDay = "1";
 		try {
 			sDay = request.getParameter("days").toString();
@@ -313,6 +356,9 @@ public class HtmlRender {
 		sb.append("<button type='button' onClick='javaScript:submit3();\"reportV = 'yes'\";'>Report Only</button>");
 
 		sb.append("</form>");
+// Added for Reporting 
+
+
 		sb.append("<table id='tableWait' width='50%' border='0' style=\"border:0px solid black;;margin-left:auto;margin-right:auto;display:none\">");
 		sb.append("<tr><td > <img src='wait.gif' /></td></tr>");
 		sb.append("</table>");
