@@ -249,7 +249,7 @@ public class HtmlRender {
 		sb.append("\n\"reportV = 'no'\";\n");	
 		sb.append("document.getElementById(\"tableWait\").style.display = \"block\";\n");
 		sb.append("\ndocument.getElementById('main').submit();");
-		//sb.append("\nreturn reportV;");
+		sb.append("\n\"return reportV\";");
 		sb.append("\n}");
 		//sb.append("\nreportV = submit2()");
 
@@ -309,7 +309,7 @@ public class HtmlRender {
 		}
 
 		sb.append("</br>");
-		sb.append("<button type='button' onClick='javaScript:submit2();'>Submit</button>");
+		sb.append("<button type='button' onClick='javaScript:return submit2();'>Submit</button>");
 		sb.append("<button type='button' onClick='javaScript:submit3();'>Report Only</button>");
 
 		sb.append("</form>");
