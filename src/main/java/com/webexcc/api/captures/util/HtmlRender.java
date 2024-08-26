@@ -246,10 +246,10 @@ public class HtmlRender {
 		sb.append("<span> &nbsp; &nbsp; &nbsp;<span/>");
 		sb.append("\n<script>");
 		sb.append("\nfunction submit2() {");
-		sb.append("reportV = 'no';\n");	
+		//sb.append("reportV = 'no';\n");	
 		sb.append("document.getElementById(\"tableWait\").style.display = \"block\";\n");
 		sb.append("\ndocument.getElementById('main').submit();");
-		sb.append("return reportV;\n");
+		//sb.append("return reportV;\n");
 		sb.append("\n}");
 		//sb.append("\nreportV = submit2()");
 
@@ -309,7 +309,7 @@ public class HtmlRender {
 		}
 
 		sb.append("</br>");
-		sb.append("<button type='button' onClick='javaScript:return submit2();'>Submit</button>");
+		sb.append("<button type='button' onClick='javaScript:submit2();\"reportV = 'no'\"'>Submit</button>");
 		sb.append("<button type='button' onClick='javaScript:submit3();'>Report Only</button>");
 
 		sb.append("</form>");
