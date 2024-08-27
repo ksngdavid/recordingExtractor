@@ -307,7 +307,7 @@ public class HtmlRender {
 
 // Added for Reporting
 		sb.append("<form id='main2' action='/createCsv'>");
-		sb.append("<label for=\"meeting-time\">Choose end time: (working backwards) </label>");
+//		sb.append("<label for=\"meeting-time\">Choose end time: (working backwards) </label>");
 		sb.append("</br>");
 	/*	try {
 			sb.append("<input type=\"date\" id=\"meeting-time\" name=\"date\" value=\"" + request.getParameter("date").toString() + "\"> \n");
@@ -344,8 +344,8 @@ public class HtmlRender {
 		sb.append("</br>");
 		sb.append("<button type='button' onClick='javaScript:submit2();'>Submit</button>");
 		sb.append("<button type='button' onClick='javaScript:submit3();'>Report Only</button>");
-
-		sb.append("</form>");*/
+*/
+		sb.append("</form>");
 // Added for Reporting 
 
 
