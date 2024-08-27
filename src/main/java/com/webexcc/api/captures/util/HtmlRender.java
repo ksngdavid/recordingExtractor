@@ -284,7 +284,7 @@ public class HtmlRender {
 			Calendar c = Calendar.getInstance();
 			sb.append("<input type=\"date\" id=\"meeting-time\" name=\"date\" value=\"" + c.get(Calendar.YEAR) + "-" + (mFormat.format(Double.valueOf(c.get(Calendar.MONTH) + 1))) + "-" + mFormat.format(Double.valueOf(c.get(Calendar.DAY_OF_MONTH))) + "\"> \n");
 		}
-		reportV = "no";
+		//reportV = "no";
 		String sDay = "1";
 		try {
 			sDay = request.getParameter("days").toString();
@@ -310,9 +310,9 @@ public class HtmlRender {
 		}
 
 		sb.append("</br>");
-		sb.append("<button type='button' onClick='javaScript:submit2();'>Submit</button>");
+		sb.append("<button type='button' button_id='my_button' onClick='javaScript:submit2();'>Submit</button>");
 		sb.append("<button type='button' onClick='javaScript:submit3();'>Report Only</button>");
-
+sb.append("document.getElementById('my_button').addEventListener('click', reportV = 'no');");
 		sb.append("</form>");
 
 // Added for Reporting
@@ -326,7 +326,7 @@ public class HtmlRender {
 			Calendar c = Calendar.getInstance();
 			sb.append("<input type=\"date\" id=\"meeting-time\" name=\"date\" value=\"" + c.get(Calendar.YEAR) + "-" + (mFormat.format(Double.valueOf(c.get(Calendar.MONTH) + 1))) + "-" + mFormat.format(Double.valueOf(c.get(Calendar.DAY_OF_MONTH))) + "\"> \n");
 		}
-		reportV = "yes";
+		//reportV = "yes";
 		sDay = "1";
 		try {
 			sDay = request.getParameter("days").toString();
