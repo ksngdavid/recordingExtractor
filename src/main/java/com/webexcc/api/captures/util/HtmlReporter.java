@@ -251,7 +251,7 @@ public class HtmlReporter {
 		File file = new File(filename);
 
 		try {
-			Filewriter fw = new FileWriter(file);
+			FileWriter fw = new FileWriter(file);
 			fw.write(message);
 			fw.close();
 		} catch (IOException e) {
