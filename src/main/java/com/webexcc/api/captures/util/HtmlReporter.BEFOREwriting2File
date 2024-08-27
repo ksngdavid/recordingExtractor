@@ -192,7 +192,6 @@ public class HtmlReporter {
 		} catch (Exception e) {
 			logger.error("Exception:{}", e.getMessage());
 		}
-		this.writeTofile();
 
 	}
 	// printCaptureRecording2 NOT USED
@@ -239,26 +238,7 @@ public class HtmlReporter {
 		} catch (Exception e) {
 			logger.error("Exception:{}", e.getMessage());
 		}
-		this.writeTofile();
 
-	}
-
-	public static void writeTofile(String[] args) {
-		String filename = "/tmp/data/reports/FileToWrite.txt";
-		String message = "I am writing data to a file";
-
-		File file = new File(filename);
-
-		try {
-			Filewriter fw; = new FileWriter(file);
-			fw.write(message);
-			fw.close();
-		} catch (IOException e) {
-			System.out.println("ERROR: Could not read file: " + filename);
-			e.printStackTrace();
-		} finally {
-			System.out.println("Closing the filewriter");
-		}
 	}
 
 	public void footer(StringBuffer sb) {
