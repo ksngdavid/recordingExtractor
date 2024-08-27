@@ -312,7 +312,7 @@ public class HtmlRender {
 		sb.append("</br>");
 		sb.append("<button type='button' button_id='my_button' onClick='javaScript:submit2();'>Submit</button>");
 		sb.append("<button type='button' onClick='javaScript:submit3();'>Report Only</button>");
-sb.append("document.getElementById('my_button').addEventListener('click', reportV = 'no');");
+
 		sb.append("</form>");
 
 // Added for Reporting
@@ -367,7 +367,7 @@ sb.append("document.getElementById('my_button').addEventListener('click', report
 		sb.append("<tr style='text-align: center;vertical-align: middle;' >\n");
 
 		sb.append("</tr>");
-
+		sb.append("document.getElementById('my_button').addEventListener('click', reportV = 'no');");
 	//return "{\"reportV}\"}";
 	//return "{(\"reportV\")}"
 	return reportV;
