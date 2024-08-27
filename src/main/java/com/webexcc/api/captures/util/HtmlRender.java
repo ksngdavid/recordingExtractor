@@ -306,7 +306,7 @@ public class HtmlRender {
 		sb.append("</form>");
 
 // Added for Reporting
-		sb.append("<form id='main2' action='/capture'>");
+		sb.append("<form id='main2' action='/captures'>");
 		sb.append("<label for=\"meeting-time\">Choose end time: (working backwards) </label>");
 		sb.append("</br>");
 		try {
