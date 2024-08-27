@@ -367,7 +367,7 @@ public class HtmlRender {
 		sb.append("<tr style='text-align: center;vertical-align: middle;' >\n");
 
 		sb.append("</tr>");
-document.getElementById('my_button').addEventListener('click', reportV = 'no');
+	//document.getElementById('my_button').addEventListener('click', reportV = 'no');
 	//return "{\"reportV}\"}";
 	//return "{(\"reportV\")}"
 	return reportV;
