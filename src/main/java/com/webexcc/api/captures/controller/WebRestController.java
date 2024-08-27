@@ -158,7 +158,8 @@ public class WebRestController {
 
 		try {
 			// date time
-			String formValue = htmlRender.form(request, sb);
+			String formValue = "no";
+			htmlRender.form(request, sb);
 			/**
 			 * do the work
 			 */

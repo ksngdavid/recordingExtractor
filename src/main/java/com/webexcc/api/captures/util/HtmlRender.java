@@ -241,23 +241,14 @@ public class HtmlRender {
 		sb.append("</html>\n");
 	}
 
-	public String form(HttpServletRequest request, StringBuffer sb) {
-		String reportV = "";
+	public void form(HttpServletRequest request, StringBuffer sb) {
 		sb.append("<span> &nbsp; &nbsp; &nbsp;<span/>");
 		sb.append("\n<script>");
 		sb.append("\nfunction submit2() {");
-		//sb.append("reportV = 'no';\n");	
 		sb.append("document.getElementById(\"tableWait\").style.display = \"block\";\n");
 		sb.append("\ndocument.getElementById('main').submit();");
-		//sb.append("return reportV;\n");
 		sb.append("\n}");
-		//sb.append("\nreportV = submit2()");
-
-		//sb.append("\n(\"reportV\") = \"no\";");
-		//reportV = request.getParameter("reportV").toString();
-		//sb.append("\n");
-		//sb.append("\n<return (\"reportV\");\n");
-		//return "{\"Exception\":\"" + e.getMessage() + "\"}";
+		sb.append("\n");
 		sb.append("\n</script>");
 		sb.append("\n");
 
@@ -267,9 +258,8 @@ public class HtmlRender {
 		sb.append("\nfunction submit3() {");
 		sb.append("document.getElementById(\"tableWait\").style.display = \"block\";\n");
 		sb.append("\ndocument.getElementById('main2').submit();");
-		//sb.append("\nreportV = 'yes';");
 		sb.append("\n}");
-		//sb.append("\n");
+		sb.append("\n");
 		sb.append("\n</script>");
 		sb.append("\n");
 		// Added for Reporting
@@ -363,14 +353,10 @@ public class HtmlRender {
 		sb.append("<tr><td > <img src='wait.gif' /></td></tr>");
 		sb.append("</table>");
 		sb.append("</br>");
-		/*sb.append("<table width='50%' border='1' style=\"border:1px solid black;margin-left:auto;margin-right:auto;\">");
+		sb.append("<table width='50%' border='1' style=\"border:1px solid black;margin-left:auto;margin-right:auto;\">");
 		sb.append("<tr style='text-align: center;vertical-align: middle;' >\n");
 
-		sb.append("</tr>");*/
-	//document.getElementById('my_button').addEventListener('click', reportV = 'no');
-	//return "{\"reportV}\"}";
-	//return "{(\"reportV\")}"
-	return reportV;
+		sb.append("</tr>");
 	}
 
 	public void header(StringBuffer sb) {
