@@ -210,7 +210,7 @@ public class WebRestController {
 
 	//Added For Reporting
 	@GetMapping("/createCsv")
-	public Object getCaptures(HttpServletRequest request, HttpServletResponse response) {
+	public Object getReport(HttpServletRequest request, HttpServletResponse response) {
 		StringBuffer sb = new StringBuffer("<html>\n");
 		htmlRender.header(sb);
 		Captures oCaptures = new Captures();
