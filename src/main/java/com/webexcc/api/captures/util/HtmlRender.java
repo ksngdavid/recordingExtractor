@@ -363,11 +363,11 @@ public class HtmlRender {
 		sb.append("<tr><td > <img src='wait.gif' /></td></tr>");
 		sb.append("</table>");
 		sb.append("</br>");
-		sb.append("<table width='50%' border='1' style=\"border:1px solid black;margin-left:auto;margin-right:auto;\">");
+		/*sb.append("<table width='50%' border='1' style=\"border:1px solid black;margin-left:auto;margin-right:auto;\">");
 		sb.append("<tr style='text-align: center;vertical-align: middle;' >\n");
 
-		sb.append("</tr>");
-	document.getElementById('my_button').addEventListener('click', reportV = 'no');
+		sb.append("</tr>");*/
+	//document.getElementById('my_button').addEventListener('click', reportV = 'no');
 	//return "{\"reportV}\"}";
 	//return "{(\"reportV\")}"
 	return reportV;
