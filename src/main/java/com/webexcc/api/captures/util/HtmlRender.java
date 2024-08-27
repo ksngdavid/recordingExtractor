@@ -274,7 +274,7 @@ public class HtmlRender {
 			Calendar c = Calendar.getInstance();
 			sb.append("<input type=\"date\" id=\"meeting-time\" name=\"date\" value=\"" + c.get(Calendar.YEAR) + "-" + (mFormat.format(Double.valueOf(c.get(Calendar.MONTH) + 1))) + "-" + mFormat.format(Double.valueOf(c.get(Calendar.DAY_OF_MONTH))) + "\"> \n");
 		}
-		//reportV = "no";
+
 		String sDay = "1";
 		try {
 			sDay = request.getParameter("days").toString();
@@ -300,23 +300,23 @@ public class HtmlRender {
 		}
 
 		sb.append("</br>");
-		sb.append("<button type='button' button_id='my_button' onClick='javaScript:submit2();'>Submit</button>");
+		sb.append("<button type='button' onClick='javaScript:submit2();'>Submit</button>");
 		sb.append("<button type='button' onClick='javaScript:submit3();'>Report Only</button>");
 
 		sb.append("</form>");
 
 // Added for Reporting
 		sb.append("<form id='main2' action='/createCsv'>");
-//		sb.append("<label for=\"meeting-time\">Choose end time: (working backwards) </label>");
+		sb.append("<label for=\"meeting-time\">Choose end time: (working backwards) </label>");
 		sb.append("</br>");
-	/*	try {
+		try {
 			sb.append("<input type=\"date\" id=\"meeting-time\" name=\"date\" value=\"" + request.getParameter("date").toString() + "\"> \n");
 		} catch (Exception e) {
 			DecimalFormat mFormat = new DecimalFormat("00");
 			Calendar c = Calendar.getInstance();
 			sb.append("<input type=\"date\" id=\"meeting-time\" name=\"date\" value=\"" + c.get(Calendar.YEAR) + "-" + (mFormat.format(Double.valueOf(c.get(Calendar.MONTH) + 1))) + "-" + mFormat.format(Double.valueOf(c.get(Calendar.DAY_OF_MONTH))) + "\"> \n");
 		}
-		//reportV = "yes";
+
 		sDay = "1";
 		try {
 			sDay = request.getParameter("days").toString();
@@ -344,7 +344,7 @@ public class HtmlRender {
 		sb.append("</br>");
 		sb.append("<button type='button' onClick='javaScript:submit2();'>Submit</button>");
 		sb.append("<button type='button' onClick='javaScript:submit3();'>Report Only</button>");
-*/
+
 		sb.append("</form>");
 // Added for Reporting 
 
