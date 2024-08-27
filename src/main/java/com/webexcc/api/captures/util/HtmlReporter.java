@@ -172,7 +172,7 @@ public class HtmlReporter {
 
 	}
 
-	public void printCaptureRecording(Recording record, StringBuffer sb, String taskId) {
+	public void printCaptureRecording(Recording record, StringBuffer sb, String taskId, String formValue) {
 		try {
 			CaptureAttributes attributes = record.getAttributes();
 
@@ -185,7 +185,10 @@ public class HtmlReporter {
 			sb.append("<td nowrap>" + taskId + "</td>");
 			sb.append("<td nowrap>" + d1 + "</td>");
 			sb.append("<td nowrap>" + d2 + "</td>");
-			sb.append("<td style=''> <a href=\"" + attributes.getFilePath() + "\">Download</a>" + "" + "</td>");
+			if (formValue.equals("no")) {
+				sb.append("<td style=''> <a href=\"" + attributes.getFilePath() + "\">Download</a>" + "" + "</td>");
+			}
+			//sb.append("<td style=''> <a href=\"" + attributes.getFilePath() + "\">Download</a>" + "" + "</td>");
 			sb.append("</tr>");
 
 		} catch (Exception e) {
@@ -193,7 +196,7 @@ public class HtmlReporter {
 		}
 
 	}
-
+	// printCaptureRecording2 NOT USED
 	public void printCaptureRecording2(Recording record, StringBuffer sb, String fileName, String callType, String taskId) {
 		try {
 			CaptureAttributes attributes = record.getAttributes();
@@ -217,7 +220,7 @@ public class HtmlReporter {
 
 	}
 
-	public void printCaptureAttributes(Recording record, StringBuffer sb, String taskId) {
+	public void printCaptureAttributes(Recording record, StringBuffer sb, String taskId, String formValue) {
 		try {
 			Date d1 = new Date(Long.parseLong(record.getAttributes().getStartTime()));
 			Date d2 = new Date(Long.parseLong(record.getAttributes().getStopTime()));
@@ -230,7 +233,10 @@ public class HtmlReporter {
 			sb.append("<td nowrap>" + taskId + "</td>");
 			sb.append("<td nowrap>" + d1 + "</td>");
 			sb.append("<td nowrap>" + d2 + "</td>");
-			sb.append("<td style=''> <a href=\"" + record.getAttributes().getFilePath() + "\">Download</a>" + "" + "</td>");
+			if (formValue.equals("no")) {
+				sb.append("<td style=''> <a href=\"" + record.getAttributes().getFilePath() + "\">Download</a>" + "" + "</td>");
+			}
+			//sb.append("<td style=''> <a href=\"" + record.getAttributes().getFilePath() + "\">Download</a>" + "" + "</td>");
 			sb.append("</tr>");
 
 		} catch (Exception e) {

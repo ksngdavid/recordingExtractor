@@ -282,7 +282,7 @@ public class WebRestController {
 					// only print the matching search string
 					if (record.getId().contains(search)) {
 						logger.info("Flag from form :{}", formValue);
-						htmlReporter.printCaptureRecording(record, sb, capture2.getTaskId());
+						htmlReporter.printCaptureRecording(record, sb, capture2.getTaskId(), formValue);
 						if (formValue.equals("no")) {
 							writeFileToDisk(record);
 						}
@@ -290,7 +290,7 @@ public class WebRestController {
 					}
 				} else {
 					logger.info("Flag from form :{}", formValue);
-					htmlReporter.printCaptureAttributes(record, sb, capture2.getTaskId());
+					htmlReporter.printCaptureAttributes(record, sb, capture2.getTaskId(), formValue);
 					if (formValue.equals("no")){
 						writeFileToDisk(record);
 					}
