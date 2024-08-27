@@ -185,9 +185,9 @@ public class HtmlReporter {
 			sb.append("<td nowrap>" + taskId + "</td>");
 			sb.append("<td nowrap>" + d1 + "</td>");
 			sb.append("<td nowrap>" + d2 + "</td>");
-			if (formValue.equals("no")) {
+			/*if (formValue.equals("no")) {
 				sb.append("<td style=''> <a href=\"" + attributes.getFilePath() + "\">Download</a>" + "" + "</td>");
-			}
+			}*/
 			//sb.append("<td style=''> <a href=\"" + attributes.getFilePath() + "\">Download</a>" + "" + "</td>");
 			sb.append("</tr>");
 
@@ -233,9 +233,9 @@ public class HtmlReporter {
 			sb.append("<td nowrap>" + taskId + "</td>");
 			sb.append("<td nowrap>" + d1 + "</td>");
 			sb.append("<td nowrap>" + d2 + "</td>");
-			if (formValue.equals("no")) {
+			/*if (formValue.equals("no")) {
 				sb.append("<td style=''> <a href=\"" + record.getAttributes().getFilePath() + "\">Download</a>" + "" + "</td>");
-			}
+			}*/
 			//sb.append("<td style=''> <a href=\"" + record.getAttributes().getFilePath() + "\">Download</a>" + "" + "</td>");
 			sb.append("</tr>");
 
