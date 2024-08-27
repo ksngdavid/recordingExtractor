@@ -300,8 +300,8 @@ public class HtmlRender {
 		}
 
 		sb.append("</br>");
-		sb.append("<button type='button' onClick='javaScript:submit2();'>Submit</button>");
-		sb.append("<button type='button' onClick='javaScript:submit3();'>Report Only</button>");
+		sb.append("<button type='button' onClick='javaScript:submit2();'>Download Recordings</button>");
+		//sb.append("<button type='button' onClick='javaScript:submit3();'>Report Only</button>");
 
 		sb.append("</form>");
 
@@ -342,7 +342,7 @@ public class HtmlRender {
 		}
 
 		sb.append("</br>");
-		sb.append("<button type='button' onClick='javaScript:submit2();'>Submit</button>");
+		//sb.append("<button type='button' onClick='javaScript:submit2();'>Submit</button>");
 		sb.append("<button type='button' onClick='javaScript:submit3();'>Report Only</button>");
 
 		sb.append("</form>");
