@@ -208,6 +208,67 @@ public class WebRestController {
 		return sb.toString();
 	}
 
+	//Added For Reporting
+	@GetMapping("/createCsv")
+	public Object getCaptures(HttpServletRequest request, HttpServletResponse response) {
+		StringBuffer sb = new StringBuffer("<html>\n");
+		htmlRender.header(sb);
+		Captures oCaptures = new Captures();
+		String search = "";
+
+		try {
+			// date time
+			String formValue = "no";
+			htmlRender.form(request, sb);
+			/**
+			 * do the work
+			 */
+			try {
+				// info from html form
+				request.getParameter("date").toString();
+				request.getParameter("days").toString();
+				String date = request.getParameter("date");
+				int year = Integer.parseInt(date.split("-")[0]);
+				int month = Integer.parseInt(date.split("-")[1]);
+				int day = Integer.parseInt(date.split("-")[2]);
+				Calendar c = Calendar.getInstance();
+				c.set(Calendar.YEAR, year);
+				c.set(Calendar.MONTH, --month);
+				c.set(Calendar.DATE, day);
+				c.set(Calendar.HOUR_OF_DAY, 0);
+				c.set(Calendar.MINUTE, 0);
+				c.set(Calendar.SECOND, 0);
+				c.set(Calendar.MILLISECOND, 0);
+
+				int days = Integer.parseInt(request.getParameter("days").toString());
+				// logger.info("days to go backwards:{}", days);
+				this.processTasks(oCaptures, c, days);
+				logger.info("oCaptures.data.size :{}", oCaptures.getData().size());
+				logger.info("oCaptures.data :{}", oCaptures.getData());
+
+				try {
+					search = request.getParameter("search").toLowerCase();
+					logger.info("search :{}", search);
+				} catch (Exception e) {
+				}
+				this.processCaptures(sb, oCaptures, search, formValue);
+			} catch (Exception e) {
+				logger.error("Exception:{}", e.getMessage());
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			logger.info("getCause:{}:", e.getCause());
+			logger.info("getLocalizedMessage:{}:", e.getLocalizedMessage());
+			logger.info("getMessage:{}:", e.getMessage());
+			return "{\"Exception\":\"" + StringEscapeUtils.escapeJson(e.getMessage()) + "\"}";
+		}
+		htmlRender.footer(sb);
+
+		return sb.toString();
+	}
+	//Added For Reporting
+
 	/**
 	 * loop thru all call recordings, render results via HTML & call write file method
 	 */
