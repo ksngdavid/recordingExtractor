@@ -2,6 +2,7 @@ package com.webexcc.api.captures.util;
 
 import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Field;
 import java.text.DecimalFormat;
@@ -250,7 +251,7 @@ public class HtmlReporter {
 		File file = new File(filename);
 
 		try {
-			Filewriter fw; = new FileWriter(file);
+			Filewriter fw = new FileWriter(file);
 			fw.write(message);
 			fw.close();
 		} catch (IOException e) {
