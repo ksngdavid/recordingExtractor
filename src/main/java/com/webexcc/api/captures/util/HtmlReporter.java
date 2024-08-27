@@ -244,7 +244,7 @@ public class HtmlReporter {
 
 	}
 
-	public static void writeTofile(String[] args) {
+	public static void writeTofile() {
 		String filename = "/tmp/data/reports/FileToWrite.txt";
 		String message = "I am writing data to a file";
 
