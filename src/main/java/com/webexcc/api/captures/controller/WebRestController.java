@@ -283,7 +283,7 @@ public class WebRestController {
 					if (record.getId().contains(search)) {
 						logger.info("Flag from form :{}", formValue);
 						htmlReporter.printCaptureRecording(record, sb, capture2.getTaskId());
-						if (formValue == "no") {
+						if (formValue.equals("no")) {
 							writeFileToDisk(record);
 						}
 						
@@ -291,7 +291,7 @@ public class WebRestController {
 				} else {
 					logger.info("Flag from form :{}", formValue);
 					htmlReporter.printCaptureAttributes(record, sb, capture2.getTaskId());
-					if (formValue == "no"){
+					if (formValue.equals("no")){
 						writeFileToDisk(record);
 					}
 					
