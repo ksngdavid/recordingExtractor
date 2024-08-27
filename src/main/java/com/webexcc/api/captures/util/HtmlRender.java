@@ -316,7 +316,7 @@ sb.append("document.getElementById('my_button').addEventListener('click', report
 		sb.append("</form>");
 
 // Added for Reporting
-		sb.append("<form id='main2' action='/createCSV'>");
+		sb.append("<form id='main2' action='/capture'>");
 		sb.append("<label for=\"meeting-time\">Choose end time: (working backwards) </label>");
 		sb.append("</br>");
 		try {
