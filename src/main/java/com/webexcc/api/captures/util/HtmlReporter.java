@@ -189,11 +189,10 @@ public class HtmlReporter {
 			// Report does not need Download
 			//sb.append("<td style=''> <a href=\"" + attributes.getFilePath() + "\">Download</a>" + "" + "</td>");
 			sb.append("</tr>");
-
+			this.writeTofile(record.getId(), record.getAttributes().getCalltype(), taskId, d1, d2);
 		} catch (Exception e) {
 			logger.error("Exception:{}", e.getMessage());
 		}
-		this.writeTofile(record.getId(), record.getAttributes().getCalltype(), taskId, d1, d2);
 
 	}
 	// printCaptureRecording2 NOT USED
@@ -236,12 +235,10 @@ public class HtmlReporter {
 			// Report does not need Download
 			//sb.append("<td style=''> <a href=\"" + record.getAttributes().getFilePath() + "\">Download</a>" + "" + "</td>");
 			sb.append("</tr>");
-
+			this.writeTofile(record.getId(), record.getAttributes().getCalltype(), taskId, d1, d2);
 		} catch (Exception e) {
 			logger.error("Exception:{}", e.getMessage());
 		}
-		this.writeTofile(record.getId(), record.getAttributes().getCalltype(), taskId, d1, d2);
-
 	}
 
 	public static void writeTofile(String recordingID, String callType, String sessionId, Date start, Date end) {
