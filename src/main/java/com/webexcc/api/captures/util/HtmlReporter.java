@@ -244,7 +244,7 @@ public class HtmlReporter {
 	public static void writeTofile(String recordingID, String callType, String sessionId, Date start, Date end) {
 		// 1. Define the path that we want to write
 		String filename = "/tmp/data/reports/recordingReport.csv";
-		String message = recordingID + ", " + callType + ", " + sessionID + ", " + start + ", " + end;
+		String message = recordingID + ", " + callType + ", " + sessionId + ", " + start + ", " + end;
 		// 2. Create the file in Java
 		File file = new File(filename);
 
