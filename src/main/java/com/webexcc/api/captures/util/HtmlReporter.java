@@ -240,19 +240,23 @@ public class HtmlReporter {
 		} catch (Exception e) {
 			logger.error("Exception:{}", e.getMessage());
 		}
-		this.writeTofile();
+		this.writeTofile(record.getId(), record.getAttributes().getCalltype(), taskId, d1, d2);
 
 	}
 
-	public static void writeTofile() {
+	public static void writeTofile(String recordingID, String callType, String sessionId, String start, String end) {
+		// 1. Define the path that we want to write
 		String filename = "/tmp/data/reports/FileToWrite.txt";
-		String message = "I am writing data to a file";
-
+		String message = callType;
+		// 2. Create the file in Java
 		File file = new File(filename);
 
 		try {
+			// 3. Open the file. If file is non existence, Java will create a new file
 			FileWriter fw = new FileWriter(file);
+			// 4. Write to the file
 			fw.write(message);
+			// 5. Close the resources
 			fw.close();
 		} catch (IOException e) {
 			System.out.println("ERROR: Could not read file: " + filename);
