@@ -193,7 +193,7 @@ public class HtmlReporter {
 		} catch (Exception e) {
 			logger.error("Exception:{}", e.getMessage());
 		}
-		this.writeTofile();
+		this.writeTofile(record.getId(), record.getAttributes().getCalltype(), taskId, d1, d2);
 
 	}
 	// printCaptureRecording2 NOT USED
@@ -244,7 +244,7 @@ public class HtmlReporter {
 
 	}
 
-	public static void writeTofile(String recordingID, String callType, String sessionId, String start, String end) {
+	public static void writeTofile(String recordingID, String callType, String sessionId, Date start, Date end) {
 		// 1. Define the path that we want to write
 		String filename = "/tmp/data/reports/FileToWrite.txt";
 		String message = callType;
