@@ -253,6 +253,7 @@ public class HtmlReporter {
 			FileWriter fw = new FileWriter(file);
 			// 4. Write to the file
 			fw.write(message);
+			fw.write(System.getProperty("line.separator"));
 			// 5. Close the resources
 			fw.close();
 		} catch (IOException e) {
