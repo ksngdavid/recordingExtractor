@@ -250,10 +250,10 @@ public class HtmlReporter {
 
 		try {
 			// 3. Open the file. If file is non existence, Java will create a new file
-			FileWriter fw = new FileWriter(file);
+			FileWriter fw = new FileWriter(file, boolean append);
 			// 4. Write to the file
 			fw.write(System.getProperty("line.separator"));
-			fw.write(message);
+			fw.write(message, true);
 			// 5. Close the resources
 			fw.close();
 		} catch (IOException e) {
